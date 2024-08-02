@@ -1,0 +1,303 @@
+.Tri_grid {
+  width: 100%;
+  height: 100%; 
+  background: linear-gradient(to right, #171717, #171717 40%, #48E9E9, #171717 60%, #171717); /* ปรับสีเข้าไปเข้มขึ้นตามความต้องการ */
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+.Tri_grid_2 {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #021515, #021515 40%, #48E9E9, #021515 60%, #021515); /* ปรับสีเข้าไปเข้มขึ้นตามความต้องการ */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: rotateX(180deg); /* หมุนแบบทวนเข็มนาฬิกา */
+}
+.Pentagon {
+    width: 105%;
+    height: 90%;
+    background: linear-gradient(to right, #021515, #021515 5%, #48E9E9, #021515 95%, #021515); /* ปรับสีเข้าไปเข้มขึ้นตามความต้องการ */
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    /* clip-path: polygon(0% 50%, 38% 100%, 100% 82%, 100% 18%, 38% 0%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    transform: rotateX(180deg); /* หมุนแบบทวนเข็มนาฬิกา */
+    top: 11%;
+  }
+.pentagon-progress-container {
+    position: relative;
+    width: 30%; /* ปรับขนาดตามที่ต้องการ */
+    height: 120%; /* ปรับขนาดตามที่ต้องการ */
+    clip-path: polygon(0% 50%, 38% 100%, 100% 82%, 100% 18%, 38% 0%);
+    background: linear-gradient(to right, #021515, #021515 5%, #48E9E9, #021515 95%, #021515);
+    margin-left: 5%;
+    top: -128%;
+  }
+  
+  .progress-bar {
+    display: flex;
+    flex-direction: column-reverse; /* เปลี่ยนเส้นขีดให้เรียงจากบนลงล่าง */
+    justify-content: space-between;
+    height: 100%;
+    clip-path: polygon(0% 50%, 38% 100%, 100% 82%, 100% 18%, 38% 0%);
+  }
+  
+  .progress-section {
+    flex-grow: 1;
+    background-color: transparent; /* สีพื้นหลังของแต่ละช่อง */
+    border: 1px solid #000; /* เส้นขอบของแต่ละช่อง */
+  }
+  
+  .progress-section.filled {
+    transition: transform 0.5s ease; /* เพิ่ม transition เพื่อทำให้การเคลื่อนไหวดูนุ่มนวลขึ้น */
+    transform: translateY(calc(100% - var(--progress))); /* ใช้ translateY เพื่อเลื่อน progress bar ขึ้นลง */
+    background-color: hsl(calc(var(--hue)), 100%, 50%); /* ใช้สีในรูปแบบ HSL ตามตำแหน่งของ progress */
+  }
+  
+  
+  .pentagon-progress-container_2 {
+    position: relative;
+    width: 30%;
+    height: 120%;
+    clip-path: polygon(0% 50%, 38% 100%, 100% 82%, 100% 18%, 38% 0%);
+    background: linear-gradient(to right, #021515, #021515 5%, #48E9E9, #021515 95%, #021515);
+    justify-content: flex-end;
+    transform: scaleX(-1);
+    left: 64.2%;
+    top:  0.1%;
+}
+
+.progress-bar_2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end; /* จัดให้ progress bar ลงไปล่างของ container */
+    height: 100%;
+    clip-path: polygon(0% 50%, 38% 100%, 100% 82%, 100% 18%, 38% 0%);
+}
+
+.progress-section_2 {
+    flex-grow: 1;
+    background-color: transparent;
+    border: 1px solid #000;
+}
+
+.progress-section_2.filled {
+  transition: transform 0.5s ease; /* เพิ่ม transition เพื่อทำให้การเคลื่อนไหวดูนุ่มนวลขึ้น */
+  transform: translateY(calc(100% - var(--progress))); /* ใช้ translateY เพื่อเลื่อน progress bar ขึ้นลง */
+  background-color: hsl(calc((var(--hue) * -1) + 120), 100%, 50%); /* ใช้สีในรูปแบบ HSL ตามตำแหน่งของ progress */
+}
+.Back_cir_1{
+  width: 70%; /* กำหนดความกว้างของ div */
+  height: 70%; /* กำหนดความสูงของ div */
+  background: linear-gradient(to right, #171717 1%,#7D7373, #171717 99%); /* ปรับสีเข้าไปเข้มขึ้นตามความต้องการ */
+  border-radius: 50%; /* กำหนดให้มีรูปร่างเป็นวงกลม */
+  position: absolute; /* กำหนดให้ div มีตำแหน่งเป็น absolute */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* กำหนดให้ div อยู่ด้านหน้าสุด */
+  left: 15%;
+  top: 15%;
+}
+.Back_cir_2{
+  width: 10%; /* กำหนดความกว้างของ div */
+  height: 50%; /* กำหนดความสูงของ div */
+  background-color: green; /* กำหนดสีพื้นหลังของ div */
+  border-radius: 50%; /* กำหนดให้มีรูปร่างเป็นวงกลม */
+  position: absolute; /* กำหนดให้ div มีตำแหน่งเป็น absolute */
+  
+}
+.Back_cir_1_1{
+  width: 80%; /* กำหนดความกว้างของ div */
+  height: 80%; /* กำหนดความสูงของ div */
+  background: linear-gradient(to right, #171717 1%,#7D7373, #171717 99%); /* ปรับสีเข้าไปเข้มขึ้นตามความต้องการ */
+  border-radius: 50%; /* กำหนดให้มีรูปร่างเป็นวงกลม */
+  position: absolute; /* กำหนดให้ div มีตำแหน่งเป็น absolute */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* กำหนดให้ div อยู่ด้านหน้าสุด */
+  left: 10%;
+  top: -20%;
+}
+.Circle_1{
+  left: -7%;
+  top: -6.9%;
+}
+/* Circle.css */
+.ArcGauge_1{
+  position: relative;
+  top: -19%;
+  left: -8%;
+}
+.ArcGauge_2{
+  position: relative;
+  top: -19%;
+  transform: rotate(180deg);
+  left: 8%;
+  
+}
+.TextArcGauge_1{
+  position: fixed;
+}
+.Text_logo{
+  position: fixed;
+}
+.Box_logo{
+  width: 12%;
+  height: 70%;
+  top: 2%;
+  transform: rotateX(180deg);
+}
+@keyframes wave {
+  0% {
+    color: #ff0000;
+  }
+  25%{
+    color: #ffffff;
+  }
+  50% {
+    color: #ff0000;
+  }
+  75%{
+    color: #ffffff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+.Box_status{
+  color: #ffffff;
+  background: #042C29;
+  position: fixed;
+  left: 42%;
+  top: 40%;
+
+}
+.BoxItem_Gear{
+  left: 48.2%;
+  top: 41%;
+}
+.BoxItem_Gear_2 {
+  left: 48.45%;
+  top: 41.2%;
+  
+}
+.Text_gear{
+  position: fixed;
+  top: 40.5%;
+  left: 48.9%;
+}
+.Rang{
+
+  
+  position: fixed;
+  top: 50%;
+}
+.Status{
+  position: fixed;
+  top: 60%;
+  left: 43%;
+}
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon_charge {
+  animation: bounceIcon 2s linear infinite; /* บรีดดิ้งเรื่อยๆ ทุก 2 วินาที */
+}
+
+@keyframes bounceIcon {
+  0%, 100% {
+    transform: scale(1); /* สเกลเป็น 1 ที่จุดเริ่มต้นและจบ */
+  }
+  50% {
+    transform: scale(1.2); /* สเกลใหญ่ขึ้นที่กลางช่วง animation */
+  }
+}
+
+/* ChargeIcon.css */
+
+.ChargeIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #48E9E9;
+  font-size: 24px;
+  z-index: 999; /* ให้ Icon charge อยู่ด้านบนสุด */
+}
+
+/* สำหรับเนื้อหาอื่นบนหน้า app */
+.AppContent {
+  filter: blur(5px); /* เบลอเนื้อหาอื่นบนหน้า app เมื่อมีการ charge */
+  transition: filter 0.3s ease; /* ให้เนื้อหาเบลออย่างนุ่มนวล */
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/src/Orbitron/Orbitron-VariableFont_wght.ttf') format('truetype');
+}
+.Text_gear {
+  font-family: 'Orbitron', sans-serif;
+  /* ส่วนอื่นๆ ของ CSS ที่คุณต้องการใช้ */
+}
+.mode_button_container{
+  position: relative;
+  top: -120%;
+  left: 5%;
+}
+.Dark_class{
+  position: relative;
+  top: -70%;
+  left: 1%;
+}
+.Im_class{
+  position: relative;
+  top: 50%;
+  left: 25%;
+  width: 50%;
+}
+.faBolt_class_2{
+  position: relative;
+  top: -140%;
+}
+.Box_gear_22{
+  position: relative;
+  left: 40%;
+  top: -50%
+}
+.Box_gear_23{
+  position: relative;
+  left: 45%;
+  top: 10%
+}
+.Box_gear_24{
+  position: relative;
+  left: 50%;
+  top: -100%
+}
+
+/* src/index.css หรือ src/App.css */
+/* src/index.css หรือ src/App.css */
+@font-face {
+  font-family: 'DigitalFont';
+  src: url('/src/digital-7 (1)/digital-7.ttf') format('truetype');
+}
+
+.digital-font {
+  font-family: 'DigitalFont', sans-serif;
+}
+
+
